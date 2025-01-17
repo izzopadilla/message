@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>since i  cant say it</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        header {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>enter</header>
+    <p>name?</p>
+
+    <form id="secret-form">
+        <input type="text" id="name" name="name" placeholder="name, last name" required>
+        <br>
+        <input type="submit" value="enter">
+    </form>
+
+    <script>
+        document.getElementById('secret-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const nameInput = document.getElementById('name').value;
+            if (nameInput.toLowerCase() === 'reina sarmiento') {
+                window.location.href = 'message.html'; // 
+            } else {
+                alert('Access Denied: Name does not match.');
+            }
+        });
+    </script>
+</body>
+</html>

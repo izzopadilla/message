@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter for you, but the words get confused..</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .gif-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gif-container:hover::after {
+            content: "!";
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5em;
+            color: #ff9ccc;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50 -50%) translateY(-10px);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(10px);
+            }
+        }
+
+        .letter {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: light gray;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.10);
+            max-width: 400px;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #ff9ccc;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .letter.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container" id="gif-container">
+        <img src="heartpixel.gif" alt="Floating Gif" width="200">
+    </div>
+
+    <div class="letter" id="letter">
+        <p>hello reina !!!</p>
+        <p> 
+although it is quite obvious, but i will never leave you.
+i would think of this as less of a confession, (like a cheesy love letter lol),s
+but more of letter that is able to encapsulate and write out my feelings. (isnt that basically a confession, love letter??? idk basta),
+i want to take care of you when your ill and frail,
+i wanna be there when you need someone and not when your feeling suffocated,
+i love yuo,
+
+i dont want to force you to pursue a relationship with me, this is merely a message that i have kept delayed.
+the last thing i would want is to force you into something you dont wanna do so yeah lol,
+
+its an understatement (i think i should not say that but idk i cant think of anythig else),
+this is all being written as it is right now as im coding it so like yeah im writing tgis right now with no idea,
+on what ot put lol,
+
+ill be here i will not leave.
+losers together?
+
+
+
+
+</p>
+        <p>from and made by uhh<br>izzo :P<p>
+    </div>
+
+    <script>
+        const gifContainer = document.getElementById('gif-container');
+        const letter = document.getElementById('letter');
+
+        gifContainer.addEventListener('click', () => {
+            gifContainer.style.display = 'none';
+            letter.classList.add('show');
+        });
+    </script>
+</body>
+</html>
+
+
